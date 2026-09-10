@@ -1,19 +1,960 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="Tusher Chandra Mondol — HPC systems researcher working at the intersection of AI and systems." name="description"/><meta content="#17162b" name="theme-color"/><title>Tusher Chandra Mondol | HPC Systems · AI × Systems</title><link href="assets/favicon.svg" rel="icon" type="image/svg+xml"/><link href="assets/styles.css" rel="stylesheet"/><script defer="" src="assets/script.js"></script></head>
-<body><div aria-hidden="true" class="cursor-glow"></div><header class="site-header"><nav class="nav container"><a class="brand" href="#top">TCM<span>.</span></a><button aria-label="Open menu" class="nav-toggle">☰</button><div class="nav-links"><a href="#about">Bio</a><a href="#research">Research</a><a href="#experience">Experience</a><a href="#publications">Publications</a><a href="#projects">Projects</a><a href="#news">News</a><a href="explore.html">Beyond Research ✦</a></div></nav></header>
-<main id="top"><section class="hero section"><div class="blob b1"></div><div class="blob b2"></div><div class="container hero-grid"><div class="reveal"><p class="eyebrow">HPC Systems · Interconnection Networks · AI × Systems · Researcher · Builder · Explorer</p><h1>Making large-scale computing systems <span class="gradient-text">faster, smarter &amp; more scalable.</span></h1><p class="hero-title">Hi, I'm Tusher — an HPC systems researcher and Ph.D. candidate in Computer Science at Florida State University.</p><p class="hero-copy">My work focuses on communication and performance in large-scale systems — including adaptive routing, process mapping, node allocation, congestion, and simulation. I study the communication behavior of both traditional HPC and AI workloads, and I am especially interested in the two-way connection between <strong>AI and Systems</strong>: improving systems with intelligent techniques, and improving large-scale AI training through better systems and communication.</p><div class="hero-actions"><a class="button primary" href="#research">Explore my research →</a><a class="button warm" href="explore.html">See my other side ✦</a><a class="button secondary" href="resume.pdf" target="_blank">View Resume ↗</a><a class="button secondary" download="" href="resume.pdf">Download Resume ↓</a></div><div class="social-row"><a href="https://github.com/tusher002" target="_blank">GitHub ↗</a><a href="https://www.linkedin.com/in/tusher-chandra-mondol-2a6179153/" target="_blank">LinkedIn ↗</a><a href="https://scholar.google.com/citations?user=k2KLazkAAAAJ&amp;hl=en" target="_blank">Google Scholar ↗</a><a href="https://orcid.org/0009-0006-6138-1830" target="_blank">ORCID ↗</a></div></div><aside class="hero-card tilt reveal"><div class="mini-orbit">✦</div><p class="card-label">What I work on</p><h2>Communication &amp; performance at scale.</h2><p>Routing, placement, allocation, congestion, and workload communication — across traditional HPC and increasingly communication-intensive AI workloads.</p><div class="focus-pills"><span>HPC Systems</span><span>Interconnection Networks</span><span>Adaptive Routing</span><span>Process Mapping</span><span>Node Allocation</span><span>AI Workloads</span></div><a class="tiny-link" href="#ai-systems">Where I want to take this next →</a></aside></div></section>
-<section class="section" id="about"><div class="container split"><div class="reveal"><p class="section-kicker">01 · Bio</p><h2>Curious by nature.<br/>Systems researcher by profession.</h2></div><div class="reveal"><p class="lead">I am a Ph.D. candidate in Computer Science at Florida State University, advised by Prof. Xin Yuan. I study communication optimization and system-level performance in high-performance computing, with a particular focus on large-scale interconnection networks.</p><p class="muted">My research spans adaptive routing, process mapping, congestion analysis, node allocation, inter-job interference, and packet/MPI-level simulation. Across these problems, I analyze how applications communicate — including the distinct communication behavior of deep-learning and LLM workloads — and how network and system decisions affect end-to-end performance.</p><p class="muted">Before focusing on HPC, I built AI-enabled educational simulations with virtual agents, adaptive dialogue, and data-driven assessment, and I worked as a software engineer developing backend automation systems.</p><div class="tag-row"><span>HPC Systems</span><span>Interconnection Networks</span><span>Systems for AI</span><span>AI for Systems</span></div></div></div></section>
-<section class="section tint" id="ai-systems"><div class="container"><div class="ai-banner reveal"><p class="section-kicker">Research vision</p><h2>AI for Systems. Systems for AI.</h2><p class="lead">AI is an important part of where my systems research is going, but it grows directly from the communication problems I already study. I am interested in both directions: using intelligence to improve system decisions, and designing communication-efficient systems that improve the performance and scalability of distributed AI.</p><div class="ai-flow"><div class="ai-side"><p class="smallcaps">AI → Systems</p><h3>Use learning to make systems better</h3><p class="muted">I have explored learning-based approaches to adaptive routing and system decisions. Going forward, I want to study where machine learning and reinforcement learning can improve routing, allocation, congestion management, and other dynamic decisions — while remaining grounded in strong systems baselines.</p></div><div class="ai-arrow">↔</div><div class="ai-side"><p class="smallcaps">Systems → AI</p><h3>Build systems that make AI better</h3><p class="muted">My routing and process-mapping studies already include deep-learning and LLM workloads and examine how communication optimization changes their execution performance. I want to extend this systems expertise toward large-scale AI training, including interconnect behavior, collective communication, placement, routing, and resource allocation.</p></div></div></div></div></section>
-<section class="section" id="research"><div class="container"><p class="section-kicker">02 · Research</p><h2>What I work on — and why.</h2><p class="lead">My research starts from a simple systems question: when thousands of communicating processes share a large machine, how can the network, runtime, and placement decisions work together instead of becoming bottlenecks?</p><div class="research-stack"><article class="research-detail reveal"><div class="research-num">01</div><div><h3>Adaptive Routing for Large-Scale Interconnection Networks</h3><p>I study how adaptive routing can respond to congestion and changing traffic in high-radix networks such as Dragonfly. The goal is to understand how network-level routing decisions translate into application-level performance.</p><ul><li>Analyze routing behavior under synthetic traffic, traditional HPC applications, and distributed deep-learning workloads.</li><li>Study how congestion, path choice, and traffic dynamics influence communication time and overall execution.</li><li>Explore both conventional and learning-based approaches to adaptive routing at a high level, with particular interest in using AI to make system decisions more responsive.</li></ul></div></article><article class="research-detail reveal"><div class="research-num">02</div><div><h3>Process Mapping &amp; Communication-Aware Placement</h3><p>I study how an application's communication structure can guide process placement on hierarchical HPC networks. The central challenge is to improve locality without simply moving congestion elsewhere in the machine.</p><ul><li>Analyze communication patterns and placement behavior across traditional HPC, deep-learning, and LLM workloads.</li><li>Study the relationship between communication locality, network-load distribution, and end-to-end application performance.</li><li>Investigate high-level mapping strategies that account for the hierarchical structure of large interconnection networks while avoiding exposure of unpublished implementation details.</li></ul></div></article><article class="research-detail reveal"><div class="research-num">03</div><div><h3>Node Allocation &amp; Inter-Job Interference</h3><p>My ongoing work moves one level earlier in the execution pipeline: deciding which physical nodes a job should receive before processes are mapped onto them.</p><ul><li>Study how application communication behavior can inform compact-versus-spread allocation decisions.</li><li>Analyze fragmentation and group/router-level resource availability in large systems.</li><li>Investigate how AI and traditional HPC workloads respond to allocation choices and how concurrently running jobs can interfere through the shared network.</li></ul></div></article><article class="research-detail reveal"><div class="research-num">04</div><div><h3>AI Workload Communication &amp; Training Performance</h3><p>I study AI workloads as communication-intensive system workloads, not as an isolated application domain. Deep-learning and LLM execution increasingly depends on how efficiently data moves among accelerators and nodes.</p><ul><li>Analyze communication behavior of distributed deep-learning and LLM workloads in network simulations.</li><li>Study how routing and process placement can reduce communication overhead and improve execution performance for AI workloads.</li><li>Extend this perspective toward large-scale AI training: interconnects, collective communication, placement, routing, allocation, and contention.</li></ul></div></article><article class="research-detail reveal"><div class="research-num">05</div><div><h3>Large-Scale Interconnect Simulation &amp; Performance Analysis</h3><p>I build and use packet-level and MPI-level simulation workflows to connect network mechanisms with end-to-end workload behavior.</p><ul><li>Use SST Merlin, Ember, Firefly, and BookSim for large-scale experiments.</li><li>Model traditional HPC motifs alongside AI/deep-learning communication patterns and collective-heavy workloads.</li><li>Study routing, mapping, allocation, topology variants, dynamic traffic, congestion, performance variability, and scalability.</li></ul></div></article><article class="research-detail reveal"><div class="research-num">06</div><div><h3>AI for Systems</h3><p>I am interested in using AI where it can make systems more adaptive, while keeping the work grounded in measurable systems objectives and strong non-AI baselines.</p><ul><li>Explore learning-based routing and data-driven system decisions.</li><li>Study how workload, congestion, and system state can inform adaptive policies.</li><li>Longer term, extend AI-driven decision making toward allocation, congestion management, and other system-level optimization problems.</li></ul></div></article></div></div></section>
-<section class="section tint" id="experience"><div class="container"><p class="section-kicker">03 · Experience</p><h2>Where I've been building.</h2><div class="timeline"><article class="timeline-item reveal"><div class="time">2024 — Present</div><div><h3>Graduate Research &amp; Teaching Assistant</h3><p class="muted">Department of Computer Science · Florida State University</p><p>Research on HPC interconnection networks spanning adaptive routing, process mapping, node allocation, inter-job interference, and large-scale performance evaluation with SST and BookSim. Teaching support across parallel/distributed systems and other computer science courses.</p></div></article><article class="timeline-item reveal"><div class="time">2021 — 2024</div><div><h3>Graduate Research Assistant</h3><p class="muted">Educational Psychology &amp; Learning Systems · Florida State University</p><p>Designed immersive Unity simulation environments for nursing/healthcare education with AI-driven virtual agents, adaptive dialogue, speech interaction, and Flask-based data services. Also developed Bayesian-network-based competency assessment and recommendation for game-based mathematics learning.</p></div></article><article class="timeline-item reveal"><div class="time">2020</div><div><h3>Software Engineer</h3><p class="muted">Nascenia · Dhaka, Bangladesh</p><p>Developed backend automation systems using Ruby on Rails for data processing, system monitoring, and workflow management for Robi Axiata Limited.</p></div></article></div></div></section>
-<section class="section" id="publications"><div class="container"><div class="section-heading-row"><div><p class="section-kicker">04 · Publications</p><h2>Selected research output.</h2></div><a class="button secondary" href="https://scholar.google.com/citations?user=k2KLazkAAAAJ&amp;hl=en" target="_blank">Google Scholar ↗</a></div><div class="pub-list"><!-- Unpublished research outputs intentionally hidden until public. Add them here after publication. --><article class="pub reveal"><span class="pub-year">2025</span><div><h3>Exploiting Software-Defined Networking Technology for Improving UGAL Routing in Dragonfly Networks</h3><p>R. S. Chaulagain, <strong>T. C. Mondol</strong>, S. Bhowmik, X. Yuan · IEEE CCGrid 2025</p></div></article><article class="pub reveal"><span class="pub-year">2026</span><div><h3>From Practice Partner to Co-Learning: Designing Role-Fluid AI Partnership for Skills Development</h3><p>F. Ke et al., <strong>T. C. Mondol</strong>, J. Whyte · ICLS 2026</p></div></article><article class="pub reveal"><span class="pub-year">2026</span><div><h3>Leveraging AI-Powered Simulation for Transitional Care: A Pilot Study in Usability and Learning Design</h3><p>C. Kim, F. Ke, <strong>T. C. Mondol</strong>, et al. · ICLS 2026</p></div></article><article class="pub reveal"><span class="pub-year">2022</span><div><h3>Effects of Level Trajectory on Mathematical Gameplay</h3><p>L. West et al., <strong>T. C. Mondol</strong>, et al. · ICLS 2022</p></div></article><article class="pub reveal"><span class="pub-year">2019</span><div><h3>Deep CNN-Based Ensemble CADx Model for Musculoskeletal Abnormality Detection from Radiographs</h3><p><strong>T. C. Mondol</strong>, H. Iqbal, M. M. A. Hashem · ICAEE 2019</p></div></article></div></div></section>
-<section class="section tint" id="projects"><div class="container"><p class="section-kicker">05 · Projects</p><h2>Things I've built &amp; explored.</h2><p class="lead">These projects connect algorithms, networks, workloads, and implementation — from communication optimization on Dragonfly to parallelizing a neural network from scratch.</p><div class="project-grid"><article class="project featured reveal"><div class="project-copy"><span class="status">Featured research · Process mapping</span><h3>Process Mapping for Dragonfly Networks</h3><p>Research on communication-aware process placement for hierarchical Dragonfly systems, with emphasis on how locality, network load, and application communication behavior influence end-to-end performance.</p><ul class="project-points"><li>Study mapping behavior across traditional HPC, deep-learning, and LLM workloads.</li><li>Analyze how communication locality and network-load distribution interact rather than treating placement as a distance-only problem.</li><li>Evaluate how process placement changes communication time and application execution performance, including for communication-intensive AI workloads.</li></ul><div class="tag-row"><span>HPC</span><span>Dragonfly</span><span>Process Mapping</span><span>AI Workloads</span><span>Performance Analysis</span></div></div><div class="project-mark">P</div></article>
-<article class="project reveal"><span class="status">Adaptive routing · AI for Systems</span><h3>Adaptive Routing for Dragonfly Networks</h3><p>Research on congestion-aware routing and adaptive decision making in Dragonfly networks, evaluated across traditional HPC and AI communication workloads.</p><ul class="project-points"><li>Study how path selection and congestion adaptation affect communication and end-to-end workload performance.</li><li>Analyze deep-learning workloads alongside traditional HPC applications to connect routing behavior with execution time.</li><li>Explore learning-based routing at a high level as part of a broader interest in AI for Systems, without exposing unpublished methods.</li></ul><div class="tag-row"><span>Adaptive Routing</span><span>Dragonfly</span><span>Congestion</span><span>AI Workloads</span><span>AI for Systems</span></div></article>
-<article class="project reveal"><span class="status">Systems for AI · Simulation</span><h3>HPC &amp; AI Workload / Network Simulation</h3><p>SST and BookSim workflows for studying how application communication behavior interacts with routing, placement, topology, and congestion at scale.</p><ul class="project-points"><li>Packet- and MPI-level experiments using Merlin, Ember, Firefly, and BookSim.</li><li>Traditional HPC motifs plus communication-intensive AI/deep-learning workloads.</li><li>Routing, mapping, topology, dynamic traffic, congestion, scalability, and performance variability studies.</li></ul><div class="tag-row"><span>SST</span><span>BookSim</span><span>MPI</span><span>AI Workloads</span></div></article>
-<article class="project reveal"><span class="status">Ongoing · Resource management</span><h3>Node Allocation &amp; Inter-Job Interference</h3><p>Ongoing research on how communication behavior, fragmented resource availability, and shared-network interference should influence which nodes a job receives.</p><ul class="project-points"><li>Compact-versus-spread allocation decisions informed by communication behavior.</li><li>Group/router-level availability and fragmentation awareness.</li><li>Extending toward interference-aware multi-job allocation.</li></ul></article>
-<article class="project reveal"><span class="status">Systems exploration</span><h3>Dragonfly Global-Link Arrangement</h3><p>Investigated genetic-algorithm and randomized strategies for arranging global links and evaluated whether alternative arrangements materially change performance under studied workloads and configurations.</p></article>
-<article class="project reveal"><span class="status">AI for Systems</span><h3>Learning-Based Routing Exploration</h3><p>Explored machine-learning-based estimation of routing decisions from observed network conditions, strengthening my interest in practical AI for Systems.</p></article>
-<article class="project reveal"><span class="status">Parallel computing</span><h3>Neural Network from Scratch</h3><p>Implemented an MNIST neural network in C/C++ and progressively accelerated it across multiple levels of parallelism.</p><ul class="project-points"><li>Loop-level optimization and SIMD vectorization with SSE/AVX.</li><li>Shared-memory parallelism with OpenMP and distributed execution with MPI.</li><li>GPU acceleration with CUDA — a compact project spanning algorithm, architecture, and systems optimization.</li></ul><div class="tag-row"><span>C/C++</span><span>SSE/AVX</span><span>OpenMP</span><span>MPI</span><span>CUDA</span></div></article></div></div></section>
-<section class="section" id="news"><div class="container narrow"><p class="section-kicker">06 · News</p><h2>What's new?</h2><div class="news-list"><article class="reveal"><time>2026</time><p>Two collaborative AI-powered learning and simulation projects appeared at ICLS 2026.</p></article><article class="reveal"><time>2025</time><p>Our software-defined adaptive-routing work for Dragonfly networks was published at IEEE CCGrid 2025.</p></article><article class="reveal"><time>2022</time><p>Collaborative work on mathematical gameplay and learning trajectories appeared at ICLS 2022.</p></article></div></div></section>
-<section class="section playground"><div class="container center reveal"><p class="section-kicker">Beyond the lab</p><h2>There is more to me than packets &amp; processes.</h2><p class="lead">I'm also an explorer, traveler, hiker, sports fan, and collector of experiences — from Lofoten peaks to desert canyons and national parks across the United States.</p><a class="button warm big" href="explore.html">Explore with me →</a></div></section>
-<section class="section contact-section"><div class="container narrow center reveal"><p class="section-kicker">Say hello</p><h2>Research idea, opportunity, or just a good conversation?</h2><p class="lead">I'd be happy to connect.</p><div class="hero-actions center-actions"><a class="button primary" href="mailto:tm20du@fsu.edu">Email me</a><a class="button secondary" href="resume.pdf" target="_blank">View Resume ↗</a><a class="button secondary" download="" href="resume.pdf">Download Resume ↓</a></div></div></section></main><footer class="footer"><div class="container footer-row"><p>© <span id="year"></span> Tusher Chandra Mondol · Built with curiosity.</p><div><a href="https://github.com/tusher002" target="_blank">GitHub</a> · <a href="https://www.linkedin.com/in/tusher-chandra-mondol-2a6179153/" target="_blank">LinkedIn</a> · <a href="https://orcid.org/0009-0006-6138-1830" target="_blank">ORCID</a></div></div></footer></body></html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <meta content="Tusher Chandra Mondol &mdash; HPC systems researcher working at the intersection of AI and systems." name="description"/>
+  <meta content="#17162b" name="theme-color"/>
+  <title>
+   Tusher Chandra Mondol | HPC Systems &middot; AI &times; Systems
+  </title>
+  <link href="assets/favicon.svg" rel="icon" type="image/svg+xml"/>
+  <link href="assets/styles.css" rel="stylesheet"/>
+  <script defer="" src="assets/script.js">
+  </script>
+ </head>
+ <body>
+  <div aria-hidden="true" class="cursor-glow">
+  </div>
+  <header class="site-header">
+   <nav class="nav container">
+    <a class="brand" href="#top">
+     TCM
+     <span>
+      .
+     </span>
+    </a>
+    <button aria-label="Open menu" class="nav-toggle">
+     ☰
+    </button>
+    <div class="nav-links">
+     <a href="#about">
+      Bio
+     </a>
+     <a href="#research">
+      Research
+     </a>
+     <a href="#experience">
+      Experience
+     </a>
+     <a href="#publications">
+      Publications
+     </a>
+     <a href="#projects">
+      Projects
+     </a>
+     <a href="#news">
+      News
+     </a>
+     <a href="explore.html">
+      Beyond Research ✦
+     </a>
+    </div>
+   </nav>
+  </header>
+  <main id="top">
+   <section class="hero section">
+    <div class="blob b1">
+    </div>
+    <div class="blob b2">
+    </div>
+    <div class="container hero-grid">
+     <div class="reveal">
+      <p class="eyebrow">
+       HPC Systems &middot; Interconnection Networks &middot; AI &times; Systems &middot; Explorer
+      </p>
+      <h1>
+       Making large-scale computing systems
+       <span class="gradient-text">
+        faster, smarter &amp; more scalable.
+       </span>
+      </h1>
+      <p class="hero-title">
+       Hi, I'm Tusher &mdash; an HPC systems researcher and Ph.D. candidate in Computer Science at Florida State University.
+      </p>
+      <p class="hero-copy">
+       My work focuses on communication and performance in large-scale systems &mdash; including adaptive routing, process mapping, node allocation, job interference, and congestion analysis. I am especially interested in the two-way connection between
+       <strong>
+        AI and Systems
+       </strong>
+       : improving systems with intelligent techniques, and improving large-scale AI training through better systems and communication.
+      </p>
+      <div class="hero-actions">
+       <a class="button primary" href="#research">
+        Explore my research &rarr;
+       </a>
+       <a class="button warm" href="explore.html">
+        See my other side ✦
+       </a>
+       <a class="button secondary" href="resume.pdf" target="_blank">
+        View Resume &nearrow;
+       </a>
+       <a class="button secondary" download="" href="resume.pdf">
+        Download Resume &darr;
+       </a>
+      </div>
+      <div class="social-row">
+       <a href="https://github.com/tusher002" target="_blank">
+        GitHub &nearrow;
+       </a>
+       <a href="https://www.linkedin.com/in/tusher-chandra-mondol-2a6179153/" target="_blank">
+        LinkedIn &nearrow;
+       </a>
+       <a href="https://scholar.google.com/citations?user=k2KLazkAAAAJ&amp;hl=en" target="_blank">
+        Google Scholar &nearrow;
+       </a>
+       <a href="https://orcid.org/0009-0006-6138-1830" target="_blank">
+        ORCID &nearrow;
+       </a>
+      </div>
+     </div>
+     <aside class="hero-card tilt reveal">
+      <div class="mini-orbit">
+       ✦
+      </div>
+      <p class="card-label">
+       What I work on
+      </p>
+      <h2>
+       Communication &amp; performance at scale.
+      </h2>
+      <p>
+       Routing, placement, allocation, inter-job interference, and workload communication &mdash; across traditional HPC and increasingly communication-intensive AI workloads.
+      </p>
+      <div class="focus-pills">
+       <span>
+        HPC Systems
+       </span>
+       <span>
+        Interconnection Networks
+       </span>
+       <span>
+        AI4Systems
+       </span>
+       <span>
+        Systems4AI
+       </span>
+      </div>
+      <a class="tiny-link" href="#ai-systems">
+       Where I want to take this next &rarr;
+      </a>
+     </aside>
+    </div>
+   </section>
+   <section class="section" id="about">
+    <div class="container split">
+     <div class="reveal">
+      <p class="section-kicker">
+       01 &middot; Bio
+      </p>
+      <h2>
+       Curious by nature.
+       <br/>
+       Systems researcher by profession.
+      </h2>
+     </div>
+     <div class="reveal">
+      <p class="lead">
+       I am a Ph.D. candidate in Computer Science at Florida State University, advised by Prof. Xin Yuan. I study communication optimization and system-level performance in high-performance computing, with a particular focus on large-scale interconnection networks.
+      </p>
+      <p class="muted">
+       My research spans adaptive routing, process mapping, congestion analysis, node allocation, inter-job interference, and packet/MPI-level simulation. Across these problems, I analyze how applications communicate &mdash; including the distinct communication behavior of deep-learning and LLM workloads &mdash; and how network and system decisions affect end-to-end performance.
+      </p>
+      <p class="muted">
+       Before focusing on HPC, I built AI-enabled educational simulations with virtual agents, adaptive dialogue, and data-driven assessment, and I worked as a software engineer developing backend automation systems.
+      </p>
+      <div class="tag-row">
+       <span>
+        HPC Systems
+       </span>
+       <span>
+        Interconnection Networks
+       </span>
+       <span>
+        Systems for AI
+       </span>
+       <span>
+        AI for Systems
+       </span>
+      </div>
+     </div>
+    </div>
+   </section>
+   <section class="section tint" id="ai-systems">
+    <div class="container">
+     <div class="ai-banner reveal">
+      <p class="section-kicker">
+       Research vision
+      </p>
+      <h2>
+       AI for Systems. Systems for AI.
+      </h2>
+      <p class="lead">
+       AI is an important part of where my systems research is going, but it grows directly from the communication problems I already study. I am interested in both directions: using intelligence to improve system decisions, and designing communication-efficient systems that improve the performance and scalability of distributed AI.
+      </p>
+      <div class="ai-flow">
+       <div class="ai-side">
+        <p class="smallcaps">
+         AI &rarr; Systems
+        </p>
+        <h3>
+         Use learning to make systems better
+        </h3>
+        <p class="muted">
+         I have explored learning-based approaches to adaptive routing and system decisions. Going forward, I want to study where machine learning and reinforcement learning can improve routing, allocation, congestion management, and interference-aware decisions in shared systems &mdash; while remaining grounded in strong systems baselines.
+        </p>
+       </div>
+       <div class="ai-arrow">
+        &harr;
+       </div>
+       <div class="ai-side">
+        <p class="smallcaps">
+         Systems &rarr; AI
+        </p>
+        <h3>
+         Build systems that make AI better
+        </h3>
+        <p class="muted">
+         My routing and process-mapping studies already include deep-learning and LLM workloads and examine how communication optimization changes their execution performance. I want to extend this systems expertise toward large-scale AI training, including interconnect behavior, collective communication, placement, routing, and resource allocation.
+        </p>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+   <section class="section" id="research">
+    <div class="container">
+     <p class="section-kicker">
+      02 &middot; Research
+     </p>
+     <h2>
+      What I work on &mdash; and why.
+     </h2>
+     <p class="lead">
+      My research starts from a simple systems question: when thousands of communicating processes share a large machine, how can the network, runtime, and placement decisions work together instead of becoming bottlenecks?
+     </p>
+     <div class="research-stack">
+      <article class="research-detail reveal">
+       <div class="research-num">
+        01
+       </div>
+       <div>
+        <h3>
+         Process Mapping &amp; Communication-Aware Placement
+        </h3>
+        <p>
+         I study how an application's communication structure can guide process placement on hierarchical HPC networks. The central challenge is to improve locality without simply moving congestion elsewhere in the machine.
+        </p>
+        <ul>
+         <li>
+          Analyze the communication behavior of traditional HPC, deep-learning, and LLM workloads and how their logical
+                communication patterns interact with the physical network.
+         </li>
+         <li>
+          Study how process placement affects network traffic,
+                communication cost, congestion, and ultimately end-to-end
+                application performance.
+         </li>
+         <li>
+          Investigate the tradeoff between communication locality and
+                network load balancing when mapping applications onto
+                large-scale hierarchical interconnection networks.
+         </li>
+        </ul>
+       </div>
+      </article>
+      <article class="research-detail reveal">
+       <div class="research-num">
+        02
+       </div>
+       <div>
+        <h3>
+         Adaptive Routing for Large-Scale Interconnection Networks
+        </h3>
+        <p>
+         I study how adaptive routing can respond to congestion and changing traffic in high-radix networks such as Dragonfly. The goal is to understand how network-level routing decisions translate into application-level performance.
+        </p>
+        <ul>
+         <li>
+          Analyze routing behavior under synthetic traffic, traditional HPC applications, and distributed deep-learning workloads.
+         </li>
+         <li>
+          Study how congestion, path choice, and traffic dynamics influence communication time and overall execution.
+         </li>
+         <li>
+          Explore both conventional and learning-based approaches to adaptive routing at a high level, with particular interest in using AI to make system decisions more responsive.
+         </li>
+        </ul>
+       </div>
+      </article>
+      <article class="research-detail reveal">
+       <div class="research-num">
+        03
+       </div>
+       <div>
+        <h3>
+         Communication-Aware Node Allocation
+        </h3>
+        <p>
+         My ongoing work moves one level earlier in the execution pipeline:
+        deciding which physical nodes a job should receive before its processes
+        are mapped onto them. I study how application communication behavior
+        and system fragmentation can guide this allocation decision.
+        </p>
+        <ul>
+         <li>
+          Study how application communication behavior can inform
+            compact-versus-spread allocation decisions.
+         </li>
+         <li>
+          Analyze fragmentation and group/router-level resource availability
+            in large-scale systems.
+         </li>
+         <li>
+          Investigate how allocation decisions affect communication efficiency
+            and application performance across traditional HPC and AI workloads.
+         </li>
+        </ul>
+       </div>
+      </article>
+      <article class="research-detail reveal">
+       <div class="research-num">
+        04
+       </div>
+       <div>
+        <h3>
+         Inter-Job Interference in Shared HPC Systems
+        </h3>
+        <p>
+         Large-scale computing systems are shared by multiple jobs running
+            concurrently, and their communication can interfere with one another
+            through the network. My ongoing research studies how this inter-job
+            interference affects application performance and how communication-aware
+            system decisions can mitigate it.
+        </p>
+        <ul>
+         <li>
+          Analyze how concurrently running HPC and AI workloads interact
+                through shared network resources and how this interference affects
+                end-to-end performance.
+         </li>
+         <li>
+          Study how intelligent routing, process mapping, and node allocation
+                can work together to reduce cross-job contention and isolate
+                application communication.
+         </li>
+         <li>
+          Explore interference-aware system management toward shared
+                large-scale computing environments where multiple jobs can execute
+                with minimal performance interference.
+         </li>
+        </ul>
+       </div>
+      </article>
+      <article class="research-detail reveal">
+       <div class="research-num">
+        05
+       </div>
+       <div>
+        <h3>
+         AI Workload Communication &amp; Training Performance
+        </h3>
+        <p>
+         I study AI workloads as communication-intensive system workloads, not as an isolated application domain. Deep-learning and LLM execution increasingly depends on how efficiently data moves among accelerators and nodes.
+        </p>
+        <ul>
+         <li>
+          Analyze communication behavior of distributed deep-learning and LLM workloads in network simulations.
+         </li>
+         <li>
+          Study how routing and process placement can reduce communication overhead and improve execution performance for AI workloads.
+         </li>
+         <li>
+          Extend this perspective toward large-scale AI training: interconnects, collective communication, placement, routing, allocation, and contention.
+         </li>
+        </ul>
+       </div>
+      </article>
+      <article class="research-detail reveal">
+       <div class="research-num">
+        06
+       </div>
+       <div>
+        <h3>
+         AI for Systems
+        </h3>
+        <p>
+         I am interested in using AI where it can make systems more adaptive, while keeping the work grounded in measurable systems objectives and strong non-AI baselines.
+        </p>
+        <ul>
+         <li>
+          Explore learning-based routing and data-driven system decisions.
+         </li>
+         <li>
+          Study how workload, congestion, and system state can inform adaptive policies.
+         </li>
+         <li>
+          Longer term, extend AI-driven decision making toward allocation, congestion management, and other system-level optimization problems.
+         </li>
+        </ul>
+       </div>
+      </article>
+      <article class="research-detail reveal">
+       <div class="research-num">
+        07
+       </div>
+       <div>
+        <h3>
+         Large-Scale Interconnect Simulation &amp; Performance Analysis
+        </h3>
+        <p>
+         I build and use packet-level and MPI-level simulation workflows to connect network mechanisms with end-to-end workload behavior.
+        </p>
+        <ul>
+         <li>
+          Use SST Merlin, Ember, Firefly, and BookSim for large-scale experiments.
+         </li>
+         <li>
+          Model traditional HPC motifs alongside AI/deep-learning communication patterns and collective-heavy workloads.
+         </li>
+         <li>
+          Study routing, mapping, allocation, topology variants, dynamic traffic, congestion, performance variability, and scalability.
+         </li>
+        </ul>
+       </div>
+      </article>
+     </div>
+    </div>
+   </section>
+   <section class="section tint" id="experience">
+    <div class="container">
+     <p class="section-kicker">
+      03 &middot; Experience
+     </p>
+     <h2>
+      Where I've been building.
+     </h2>
+     <div class="timeline">
+      <article class="timeline-item reveal">
+       <div class="time">
+        2024 &mdash; Present
+       </div>
+       <div>
+        <h3>
+         Graduate Research &amp; Teaching Assistant
+        </h3>
+        <p class="muted">
+         Department of Computer Science &middot; Florida State University
+        </p>
+        <p>
+         Research on HPC interconnection networks spanning adaptive routing, process mapping, node allocation, inter-job interference, and large-scale performance evaluation with SST and BookSim. Teaching support across parallel/distributed systems and other computer science courses.
+        </p>
+       </div>
+      </article>
+      <article class="timeline-item reveal">
+       <div class="time">
+        2021 &mdash; 2024
+       </div>
+       <div>
+        <h3>
+         Graduate Research Assistant
+        </h3>
+        <p class="muted">
+         Educational Psychology &amp; Learning Systems &middot; Florida State University
+        </p>
+        <p>
+         Designed immersive Unity simulation environments for nursing/healthcare education with AI-driven virtual agents, adaptive dialogue, speech interaction, and Flask-based data services. Also developed Bayesian-network-based competency assessment and recommendation for game-based mathematics learning.
+        </p>
+       </div>
+      </article>
+      <article class="timeline-item reveal">
+       <div class="time">
+        2020
+       </div>
+       <div>
+        <h3>
+         Software Engineer
+        </h3>
+        <p class="muted">
+         Nascenia &middot; Dhaka, Bangladesh
+        </p>
+        <p>
+         Developed backend automation systems using Ruby on Rails for data processing, system monitoring, and workflow management for Robi Axiata Limited.
+        </p>
+       </div>
+      </article>
+     </div>
+    </div>
+   </section>
+   <section class="section" id="publications">
+    <div class="container">
+     <div class="section-heading-row">
+      <div>
+       <p class="section-kicker">
+        04 &middot; Publications
+       </p>
+       <h2>
+        Selected research output.
+       </h2>
+      </div>
+      <a class="button secondary" href="https://scholar.google.com/citations?user=k2KLazkAAAAJ&amp;hl=en" target="_blank">
+       Google Scholar &nearrow;
+      </a>
+     </div>
+     <div class="pub-list">
+      <!-- Unpublished research outputs intentionally hidden until public. Add them here after publication. -->
+      <article class="pub reveal">
+       <span class="pub-year">
+        2025
+       </span>
+       <div>
+        <h3>
+         Exploiting Software-Defined Networking Technology for Improving UGAL Routing in Dragonfly Networks
+        </h3>
+        <p>
+         R. S. Chaulagain,
+         <strong>
+          T. C. Mondol
+         </strong>
+         , S. Bhowmik, X. Yuan &middot; IEEE CCGrid 2025
+        </p>
+       </div>
+      </article>
+      <article class="pub reveal">
+       <span class="pub-year">
+        2026
+       </span>
+       <div>
+        <h3>
+         From Practice Partner to Co-Learning: Designing Role-Fluid AI Partnership for Skills Development
+        </h3>
+        <p>
+         F. Ke et al.,
+         <strong>
+          T. C. Mondol
+         </strong>
+         , J. Whyte &middot; ICLS 2026
+        </p>
+       </div>
+      </article>
+      <article class="pub reveal">
+       <span class="pub-year">
+        2026
+       </span>
+       <div>
+        <h3>
+         Leveraging AI-Powered Simulation for Transitional Care: A Pilot Study in Usability and Learning Design
+        </h3>
+        <p>
+         C. Kim, F. Ke,
+         <strong>
+          T. C. Mondol
+         </strong>
+         , et al. &middot; ICLS 2026
+        </p>
+       </div>
+      </article>
+      <article class="pub reveal">
+       <span class="pub-year">
+        2022
+       </span>
+       <div>
+        <h3>
+         Effects of Level Trajectory on Mathematical Gameplay
+        </h3>
+        <p>
+         L. West et al.,
+         <strong>
+          T. C. Mondol
+         </strong>
+         , et al. &middot; ICLS 2022
+        </p>
+       </div>
+      </article>
+      <article class="pub reveal">
+       <span class="pub-year">
+        2019
+       </span>
+       <div>
+        <h3>
+         Deep CNN-Based Ensemble CADx Model for Musculoskeletal Abnormality Detection from Radiographs
+        </h3>
+        <p>
+         <strong>
+          T. C. Mondol
+         </strong>
+         , H. Iqbal, M. M. A. Hashem &middot; ICAEE 2019
+        </p>
+       </div>
+      </article>
+     </div>
+    </div>
+   </section>
+   <section class="section tint" id="projects">
+    <div class="container">
+     <p class="section-kicker">
+      05 &middot; Projects
+     </p>
+     <h2>
+      Things I've built &amp; explored.
+     </h2>
+     <p class="lead">
+      These projects connect algorithms, networks, workloads, and implementation &mdash; from communication optimization on Dragonfly to parallelizing a neural network from scratch.
+     </p>
+     <div class="project-grid">
+      <article class="project featured reveal">
+       <div class="project-copy">
+        <span class="status">
+         Featured research &middot; Process mapping
+        </span>
+        <h3>
+         Process Mapping for Dragonfly Networks
+        </h3>
+        <p>
+         Research on communication-aware process placement for hierarchical Dragonfly systems, with emphasis on how locality, network load, and application communication behavior influence end-to-end performance.
+        </p>
+        <ul class="project-points">
+         <li>
+          Study mapping behavior across traditional HPC, deep-learning, and LLM workloads.
+         </li>
+         <li>
+          Analyze how communication locality and network-load distribution interact rather than treating placement as a distance-only problem.
+         </li>
+         <li>
+          Evaluate how process placement changes communication time and application execution performance, including for communication-intensive AI workloads.
+         </li>
+        </ul>
+        <div class="tag-row">
+         <span>
+          HPC
+         </span>
+         <span>
+          Dragonfly
+         </span>
+         <span>
+          Process Mapping
+         </span>
+         <span>
+          AI Workloads
+         </span>
+         <span>
+          Performance Analysis
+         </span>
+        </div>
+       </div>
+       <div class="project-mark">
+        P
+       </div>
+      </article>
+      <article class="project reveal">
+       <span class="status">
+        Adaptive routing &middot; AI for Systems
+       </span>
+       <h3>
+        Adaptive Routing for Dragonfly Networks
+       </h3>
+       <p>
+        Research on congestion-aware routing and adaptive decision making in Dragonfly networks, evaluated across traditional HPC and AI communication workloads.
+       </p>
+       <ul class="project-points">
+        <li>
+         Study how path selection and congestion adaptation affect communication and end-to-end workload performance.
+        </li>
+        <li>
+         Analyze deep-learning workloads alongside traditional HPC applications to connect routing behavior with execution time.
+        </li>
+        <li>
+         Explore learning-based routing at a high level as part of a broader interest in AI for Systems, without exposing unpublished methods.
+        </li>
+       </ul>
+       <div class="tag-row">
+        <span>
+         Adaptive Routing
+        </span>
+        <span>
+         Dragonfly
+        </span>
+        <span>
+         Congestion
+        </span>
+        <span>
+         AI Workloads
+        </span>
+        <span>
+         AI for Systems
+        </span>
+       </div>
+      </article>
+      <article class="project reveal">
+       <span class="status">
+        Systems for AI &middot; Simulation
+       </span>
+       <h3>
+        HPC &amp; AI Workload / Network Simulation
+       </h3>
+       <p>
+        SST and BookSim workflows for studying how application communication behavior interacts with routing, placement, topology, and congestion at scale.
+       </p>
+       <ul class="project-points">
+        <li>
+         Packet- and MPI-level experiments using Merlin, Ember, Firefly, and BookSim.
+        </li>
+        <li>
+         Traditional HPC motifs plus communication-intensive AI/deep-learning workloads.
+        </li>
+        <li>
+         Routing, mapping, topology, dynamic traffic, congestion, scalability, and performance variability studies.
+        </li>
+       </ul>
+       <div class="tag-row">
+        <span>
+         SST
+        </span>
+        <span>
+         BookSim
+        </span>
+        <span>
+         MPI
+        </span>
+        <span>
+         AI Workloads
+        </span>
+       </div>
+      </article>
+      <article class="project reveal">
+       <span class="status">
+        Ongoing &middot; Node allocation
+       </span>
+       <h3>
+        Communication-Aware Node Allocation
+       </h3>
+       <p>
+        Ongoing research on how application communication behavior and fragmented
+    resource availability can guide which physical nodes a job receives.
+       </p>
+       <ul class="project-points">
+        <li>
+         Study compact-versus-spread allocation decisions informed by
+        communication behavior.
+        </li>
+        <li>
+         Analyze group/router-level availability and fragmentation in
+        large-scale systems.
+        </li>
+        <li>
+         Evaluate how allocation choices affect communication efficiency and
+        application performance across HPC and AI workloads.
+        </li>
+       </ul>
+      </article>
+      <article class="project reveal">
+       <span class="status">
+        Ongoing &middot; Shared-system performance
+       </span>
+       <h3>
+        Inter-Job Interference &amp; Isolation
+       </h3>
+       <p>
+        Ongoing research on communication interference among concurrently
+        running jobs in shared large-scale computing systems, with the goal of
+        reducing cross-job contention and performance degradation.
+       </p>
+       <ul class="project-points">
+        <li>
+         Analyze how co-running HPC and AI workloads contend for shared
+            network resources.
+        </li>
+        <li>
+         Study how intelligent routing, process mapping, and node allocation
+            can jointly reduce interference between jobs.
+        </li>
+        <li>
+         Explore interference-aware system management toward shared
+            environments with minimal cross-job performance interference.
+        </li>
+       </ul>
+       <div class="tag-row">
+        <span>
+         Inter-Job Interference
+        </span>
+        <span>
+         Routing
+        </span>
+        <span>
+         Process Mapping
+        </span>
+        <span>
+         Node Allocation
+        </span>
+        <span>
+         Shared HPC Systems
+        </span>
+       </div>
+      </article>
+      <article class="project reveal">
+       <span class="status">
+        Systems exploration
+       </span>
+       <h3>
+        Dragonfly Global-Link Arrangement
+       </h3>
+       <p>
+        Investigated genetic-algorithm and randomized strategies for arranging global links and evaluated whether alternative arrangements materially change performance under studied workloads and configurations.
+       </p>
+      </article>
+      <article class="project reveal">
+       <span class="status">
+        AI for Systems
+       </span>
+       <h3>
+        Learning-Based Routing Exploration
+       </h3>
+       <p>
+        Explored machine-learning-based estimation of routing decisions from observed network conditions, strengthening my interest in practical AI for Systems.
+        I specifically, tried to estimate the bias used in UGAL-L routing using ML techniques to maintain a dynamic bias.
+       </p>
+      </article>
+      <article class="project reveal">
+       <span class="status">
+        Parallel computing
+       </span>
+       <h3>
+        Neural Network from Scratch
+       </h3>
+       <p>
+        Implemented an MNIST neural network in C/C++ and progressively accelerated it across multiple levels of parallelism.
+       </p>
+       <ul class="project-points">
+        <li>
+         Loop-level optimization and SIMD vectorization with SSE/AVX.
+        </li>
+        <li>
+         Shared-memory parallelism with OpenMP and distributed execution with MPI.
+        </li>
+        <li>
+         GPU acceleration with CUDA &mdash; a compact project spanning algorithm, architecture, and systems optimization.
+        </li>
+       </ul>
+       <div class="tag-row">
+        <span>
+         C/C++
+        </span>
+        <span>
+         SSE/AVX
+        </span>
+        <span>
+         OpenMP
+        </span>
+        <span>
+         MPI
+        </span>
+        <span>
+         CUDA
+        </span>
+       </div>
+      </article>
+     </div>
+    </div>
+   </section>
+   <section class="section" id="news">
+    <div class="container narrow">
+     <p class="section-kicker">
+      06 &middot; News
+     </p>
+     <h2>
+      What's new?
+     </h2>
+     <div class="news-list">
+      <article class="reveal">
+       <time>
+        2026
+       </time>
+       <p>
+        Two collaborative AI-powered learning and simulation projects appeared at ICLS 2026.
+       </p>
+      </article>
+      <article class="reveal">
+       <time>
+        2025
+       </time>
+       <p>
+        Our software-defined adaptive-routing work for Dragonfly networks was published at IEEE CCGrid 2025.
+       </p>
+      </article>
+      <article class="reveal">
+       <time>
+        2022
+       </time>
+       <p>
+        Collaborative work on mathematical gameplay and learning trajectories appeared at ICLS 2022.
+       </p>
+      </article>
+     </div>
+    </div>
+   </section>
+   <section class="section playground">
+    <div class="container center reveal">
+     <p class="section-kicker">
+      Beyond the lab
+     </p>
+     <h2>
+      There is more to me than packets &amp; processes.
+     </h2>
+     <p class="lead">
+      I'm also an explorer, traveler, hiker, sports fan, and collector of experiences &mdash; from Lofoten peaks to desert canyons and national parks across the United States.
+     </p>
+     <a class="button warm big" href="explore.html">
+      Explore with me &rarr;
+     </a>
+    </div>
+   </section>
+   <section class="section contact-section">
+    <div class="container narrow center reveal">
+     <p class="section-kicker">
+      Say hello
+     </p>
+     <h2>
+      Research idea, opportunity, or just a good conversation?
+     </h2>
+     <p class="lead">
+      I'd be happy to connect.
+     </p>
+     <div class="hero-actions center-actions">
+      <a class="button primary" href="mailto:tm20du@fsu.edu">
+       Email me
+      </a>
+      <a class="button secondary" href="resume.pdf" target="_blank">
+       View Resume &nearrow;
+      </a>
+      <a class="button secondary" download="" href="resume.pdf">
+       Download Resume &darr;
+      </a>
+     </div>
+    </div>
+   </section>
+  </main>
+  <footer class="footer">
+   <div class="container footer-row">
+    <p>
+     &copy;
+     <span id="year">
+     </span>
+     Tusher Chandra Mondol &middot; Built with curiosity.
+    </p>
+    <div>
+     <a href="https://github.com/tusher002" target="_blank">
+      GitHub
+     </a>
+     &middot;
+     <a href="https://www.linkedin.com/in/tusher-chandra-mondol-2a6179153/" target="_blank">
+      LinkedIn
+     </a>
+     &middot;
+     <a href="https://orcid.org/0009-0006-6138-1830" target="_blank">
+      ORCID
+     </a>
+    </div>
+   </div>
+  </footer>
+ </body>
+</html>
